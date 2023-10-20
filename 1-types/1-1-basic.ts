@@ -28,4 +28,36 @@
   let 사람: null; // 💩
   let 인간: string | null;
 
+  // unknown 💩
+  let 뭐야: unknown = 0;
+  뭐야 = "안녕";
+  뭐야 = true;
+
+  // any (anything) 💩
+  let 무엇이든: any = 0;
+  무엇이든 = "안녕";
+  무엇이든 = true;
+  무엇이든 = 0;
+
+  // void
+  function 출력(): void {
+    console.log("hello");
+    return;
+  }
+
+  let unusable: void = undefined; // 💩
+  console.log(unusable);
+
+  // never
+  function 에러(error: string): never {
+    throw new Error(error);
+    // while(true) {}
+  }
+  // 리턴되지 않을때 사용
+
+  // object
+  let 오브젝트: object;
+  function 오브젝트허용하고싶다(오브젝트: object) {};
+  오브젝트허용하고싶다({ name: 'ellie' });
+  오브젝트허용하고싶다({animal: "dog"});
 }
